@@ -1,5 +1,9 @@
 # https://youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc
 
+# `@property`, Protected, Private:
+# https://gemini.google.com/share/26697b4c0a7b
+# https://chatgpt.com/share/6927ff84-028c-800a-a315-558bfc2332f3
+
 
 # Class:
 
@@ -37,10 +41,10 @@ class Sport:
         # checking the usage of instance / class in that method's definition! 👌
 
     # https://youtu.be/5cvM-crlDvg
-    def __repr__(self):  # for unambiguity
+    def __repr__(self):  # str which if passed to eval(), makes the object again
         return f"Sport('{self.name}', {self.rank}, {self.no_of_players}, '{self.played_in}')"
 
-    def __str__(self):  # for readability
+    def __str__(self):  # readable str for the object
         return f'{self.name} is on rank {self.rank} which is played with {self.no_of_players} players {self.class_var} {self.played_in}.'
 
     def __add__(self, other):  # for adding no of players in those games
@@ -135,6 +139,8 @@ print(football.rain_matters)
 
 print()
 print(isinstance(football, Sport))
+print(isinstance(football, IndoorSport))
+print(isinstance(football, OutdoorSport))
 print(issubclass(IndoorSport, OutdoorSport))
 
 
